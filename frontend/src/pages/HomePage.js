@@ -204,7 +204,7 @@ function HomePage() {
         <div className="trip-cards">
           <div className="trip-card">
             <img
-              src="https://s3-alpha-sig.figma.com/img/9710/36bd/867b0c3b96f2536c3194012f4a8e6a35?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W0Tqabnqmo8gTzRw~gn92Q5E0QmrMbOW2HD6poPtVOWZ2xXT3B31PE0BthHIPp7wY8-zy79i1fmxIzi0GJN2rFhQzOO6wacATO2UVW2~hk8~IcbSETQ0xjAYM-wMwj2liz~oiZzwhW1fh8WLqkWrtMCedZaospy1Nm7DYCPeNi2GwyI8F3RiSst4LCDes7MmW-hn95nfqXnh-UO7QDwhDshXx1ccIS58za~O9G3FOuQGd3ZQBoEt5Riiif8znqKXspqKHysVI8prZWkXtzHFA8g9mV0UstAyGNBOIqeZAvd1sye2P2eM3-q~z3dgixybIKVEyeieek7oKAXhz1eQQQ__"
+              src="https://sandton-hotel.com/wp-content/uploads/2018/10/siFNPZf0-scaled.jpeg"
               alt="Sandton City Hotel"
             />
             <div className="trip-card-info">
@@ -288,7 +288,7 @@ function HomePage() {
         </div>
         <div className="gift-card-image">
           <img
-            src="https://s3-alpha-sig.figma.com/img/43b8/8762/e0a70df6eb554b492d0b7d2633a1ecb1?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pKJ16ZzvXzGx3j2tK9vLkkXQj48-pCEcnLGZbjFdQYAQonOCKcdIQRQ6vaJGSlI~skWTDQtCYlK~JPEKLus6q6h4QsNKU0R1npAnEYbB2qnA2a-Aiz~BWB8fApfq3nosFNI8yuKz0LAx3rQ8CbJyBE6l54TdqwjTTkvVAjwohO6inMnnKlldGpvBzXGvkidrAkWk6jQkmbBjUJ6OteGALLoUjK-ZkNgM1tUQx0DPuxS~WWzxOkkMRJtrPEckMI4kgJc6~42JnUGraIIYIUD8~F4eKPQNsc-CzrAd~AJ8lp6FaxcfTSxkqs0S4dkbtPhsAhS47ygOjetFv7dK-x-E5A__"
+            src="https://hosttools.com/wp-content/uploads/Screen-Shot-2023-05-17-at-1.27.20-PM.png"
             alt="Gift cards"
           />
         </div>
