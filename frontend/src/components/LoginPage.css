@@ -1,0 +1,39 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.login-page h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.login-page label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-page input {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.login-page button {
+  padding: 10px;
+  background-color: #ff385c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

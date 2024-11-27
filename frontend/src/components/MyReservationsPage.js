@@ -1,0 +1,84 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "../components/ViewReservations.css";
+
+const MyReservationsPage = () => {
+  const [reservations, setReservations] = useState([]);
+
+  useEffect(() => {
+    const fetchReservations = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/reservations/user",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
+        setReservations(response.data);
+      } catch (error) {
+        console.error("Error fetching reservations:", error.message);
+      }
+    };
+
+    fetchReservations();
+  }, []);
+
+  const handleDelete = async (reservationId) => {
+    try {
+      await axios.delete(
+        `http://localhost:5000/api/reservations/${reservationId}`,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+      setReservations((prev) =>
+        prev.filter((res) => res._id !== reservationId)
+      );
+    } catch (error) {
+      console.error("Error deleting reservation:", error.message);
+    }
+  };
+
+  return (
+    <div className="reservations-container">
+      <h1>My Reservations</h1>
+      <table className="reservations-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Guests</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reservations.map((res) => (
+            <tr key={res._id}>
+              <td>
+                {res.accommodation
+                  ? `${res.accommodation.title}, ${res.accommodation.location}`
+                  : "No Property Information"}
+              </td>
+              <td>{res.checkIn}</td>
+              <td>{res.checkOut}</td>
+              <td>{res.guests}</td>
+              <td>
+                <button
+                  onClick={() => handleDelete(res._id)}
+                  className="delete-button"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default MyReservationsPage;
