@@ -26,7 +26,7 @@ function HomePage() {
   useEffect(() => {
     const fetchLocations = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/locations");
+        const response = await fetch("https://airbnb-project-backend.onrender.com/api/locations");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

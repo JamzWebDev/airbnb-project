@@ -24,7 +24,7 @@ const ViewListings = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/api/accommodations",
+          "https://airbnb-project-backend.onrender.com/api/accommodations",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -45,7 +45,7 @@ const ViewListings = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.delete(
-        `http://localhost:5000/api/accommodations/${listingId}`,
+        `https://airbnb-project-backend.onrender.com/api/accommodations/${listingId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

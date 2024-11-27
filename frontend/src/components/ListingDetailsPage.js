@@ -33,7 +33,7 @@ function ListingDetailsPage() {
   useEffect(() => {
     const fetchListingDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/listing/${id}`);
+        const response = await fetch(`https://airbnb-project-backend.onrender.com/api/listing/${id}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -109,7 +109,7 @@ function ListingDetailsPage() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/reservations", {
+      const response = await fetch("https://airbnb-project-backend.onrender.com/api/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -303,7 +303,7 @@ function ListingDetailsPage() {
 
         <div className="image-gallery">
           <img
-            src={`http://localhost:5000/${listing.mainImage}`}
+            src={`https://airbnb-project-backend.onrender.com/${listing.mainImage}`}
             alt="Main"
             className="main-image"
           />
@@ -311,7 +311,7 @@ function ListingDetailsPage() {
             {listing.images.map((image, index) => (
               <img
                 key={index}
-                src={`http://localhost:5000/${image}`}
+                src={`https://airbnb-project-backend.onrender.com/${image}`}
                 alt={`Gallery ${index + 1}`}
                 className="gallery-image"
               />
@@ -439,7 +439,7 @@ function ListingDetailsPage() {
       <section className="where-youll-sleep">
         <h2>Where You'll Sleep</h2>
         <img
-          src={`http://localhost:5000/${listing.mainImage}`}
+          src={`https://airbnb-project-backend.onrender.com/${listing.mainImage}`}
           alt="Spacious Bedroom"
           className="main-image"
         />

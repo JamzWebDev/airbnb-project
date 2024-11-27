@@ -28,7 +28,7 @@ const UpdateListing = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5000/api/accommodations/${id}`,
+          `https://airbnb-project-backend.onrender.com/api/accommodations/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -122,7 +122,7 @@ const UpdateListing = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:5000/api/accommodations/${id}`,
+        `https://airbnb-project-backend.onrender.com/api/accommodations/${id}`,
         formData,
         {
           headers: {

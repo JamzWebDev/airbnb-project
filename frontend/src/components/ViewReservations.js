@@ -9,7 +9,7 @@ const ViewReservations = () => {
     const fetchReservations = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/reservations/host",
+          "https://airbnb-project-backend.onrender.com/api/reservations/host",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -28,7 +28,7 @@ const ViewReservations = () => {
   const handleDelete = async (reservationId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/reservations/${reservationId}`,
+        `https://airbnb-project-backend.onrender.com/api/reservations/${reservationId}`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }

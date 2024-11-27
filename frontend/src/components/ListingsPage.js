@@ -26,7 +26,7 @@ function ListingsPage() {
       try {
         const locationParam = location === "all" ? "all" : location;
         const response = await fetch(
-          `http://localhost:5000/api/listings/${locationParam}`
+          `https://airbnb-project-backend.onrender.com/api/listings/${locationParam}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -46,7 +46,7 @@ function ListingsPage() {
   useEffect(() => {
     const fetchLocations = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/locations");
+        const response = await fetch("https://airbnb-project-backend.onrender.com/api/locations");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -217,7 +217,7 @@ function ListingsPage() {
             >
               <div className="listing-left">
                 <img
-                  src={`http://localhost:5000/${listing.mainImage}`}
+                  src={`https://airbnb-project-backend.onrender.com/${listing.mainImage}`}
                   alt={listing.title || "Listing"}
                   className="listing-image"
                 />

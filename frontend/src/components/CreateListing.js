@@ -71,7 +71,7 @@ const CreateListing = ({ onListingCreated = () => {} }) => {
       otherImages.forEach((file) => formData.append("images", file));
 
       const response = await axios.post(
-        "http://localhost:5000/api/accommodations",
+        "https://airbnb-project-backend.onrender.com/api/accommodations",
         formData,
         {
           headers: {
