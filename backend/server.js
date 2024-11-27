@@ -6,7 +6,24 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true })); // CORS setup
+// Allow multiple origins
+const allowedOrigins = [
+  "http://localhost:3000", // Development
+  "https://airbnb-project-frontend.onrender.com", // Deployed frontend
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); // Allow the origin
+      } else {
+        callback(new Error("Not allowed by CORS")); // Block the origin
+      }
+    },
+    credentials: true,
+  })
+); // CORS setup
 
 // Connect to MongoDB
 mongoose
