@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../components/ViewListings.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ViewListings = () => {
   const location = useLocation();
@@ -63,9 +63,15 @@ const ViewListings = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   const redirectToEditForm = (listingId) => {
-    window.location.href = `/edit-listing/${listingId}`;
+    navigate(`/edit-listing/${listingId}`);
   };
+
+  // const redirectToEditForm = (listingId) => {
+  //   window.location.href = `/edit-listing/${listingId}`;
+  // };
 
   return (
     <div className="listings-container">
